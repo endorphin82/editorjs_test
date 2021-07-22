@@ -1,5 +1,5 @@
 // tools.js
-import Paragraph from '@editorjs/paragraph'
+// import Paragraph from '@editorjs/paragraph'
 import LinkTool from '@editorjs/link'
 import Embed from "@editorjs/embed";
 import Table from "@editorjs/table";
@@ -15,9 +15,19 @@ import CheckList from "@editorjs/checklist";
 import Delimiter from "@editorjs/delimiter";
 import InlineCode from "@editorjs/inline-code";
 import SimpleImage from "@editorjs/simple-image";
+
 export const EDITOR_JS_TOOLS = {
     // paragraph: Paragraph,
     embed: Embed,
+    /*  embed: {
+          class: Embed,
+          config: {
+              services: {
+                  youtube: false,
+                  coub: true
+              }
+          }
+      },*/
     table: Table,
     marker: Marker,
     list: List,

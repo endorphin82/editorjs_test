@@ -2,21 +2,26 @@ export const textHtml = "<p>Provides Headings Blocks for the <a href=\"https://i
 export const data = {
     time: 1556098174501,
     blocks: [
-        {
-            type: "header",
-            data: {
-                text: "Editor.js",
-                level: 2
-            }
-        },
+        /*  {
+             type: "raw",
+             data: {
+                 html: textHtml
+             }
+         }   /*     {
+             type: "header",
+             data: {
+                 text: "Editor.js",
+                 level: 2
+             }
+         },*/
         {
             type: "paragraph",
             data: {
                 text:
-                    "Hey. Meet the new Editor. On this page you can see it in action — try to edit this text."
+                textHtml
             }
         },
-        {
+        /*{
             type: "header",
             data: {
                 text: "Key features",
@@ -106,7 +111,7 @@ export const data = {
                 stretched: false,
                 withBackground: false
             }
-        }
+        }*/
     ],
     version: "2.12.4"
 }

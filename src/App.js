@@ -2,11 +2,17 @@ import './App.css';
 import EditorJs from 'react-editor-js';
 import {EDITOR_JS_TOOLS} from "./tools";
 import {data} from "./datas"
-import {useRef, useState} from "react";
+import {useRef} from "react";
 
 function App() {
-    const editorRef=useRef(null)
-    const [editorInstance, ] = useState()
+    const instanceRef = useRef(null);
+
+    async function handleSave() {
+        const savedData = await instanceRef.current.save();
+        console.log({instanceRef})
+        console.log("savedData", savedData);
+    }
+
     return (
         <div className="App">
             <header className="App-header">
@@ -15,7 +21,8 @@ function App() {
                 </p>
             </header>
             <EditorJs
-                // instanceRef={instance => editorRef = instance}
+                onChange={handleSave}
+                instanceRef={instance => (instanceRef.current = instance)}
                 data={data} tools={EDITOR_JS_TOOLS}/>
         </div>
     );
